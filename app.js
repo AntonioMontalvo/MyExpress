@@ -73,9 +73,9 @@ app.use(function(req, res) {
 
 
 //start listening
-var port = 3000 || process.env.PORT;
 
-app.listen(port, function() {
+
+app.listen(process.env.PORT || 3000, function() {
     console.log(school.mySchool);
 
     console.log("app listening on port 3000!. Go to http://localhost:3000"); //confirm app is listening
