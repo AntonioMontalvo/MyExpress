@@ -1,7 +1,7 @@
 console.log("I'm the school Builder");
 
 //Here we make our AJAX call to the server to get the most current data about the school
-$.get("https://localhost:3000/schoolPage/studentsPerGrade", function(data) {
+$.get("http://localhost:3000/schoolPage/studentsPerGrade", function(data) {
 
     for (key in data) {
         var school = data[key];
@@ -39,7 +39,7 @@ $('#add-new-student').on('click', function() {
     };
 
     //
-    $.post("https://localhost:3000/schoolPage/newStudent", newStudent)
+    $.post("http://localhost:3000/schoolPage/newStudent", newStudent)
         .done(function(data) {
         	$("#confirmed-name").text("");
             $("#confirmed-name").append(data.firstname + " " + data.lastname + " has been successfully enrolled in grade " + data.grade);
